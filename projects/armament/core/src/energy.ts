@@ -1,4 +1,4 @@
-import {Constructor} from './constructor';
+import {Constructor} from './common/constructor';
 
 /** Coerces a data-bound value (typically a string) to a boolean. */
 export function coerceBooleanProperty(value: any): boolean {
