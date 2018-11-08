@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "sps",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -130,7 +130,7 @@
       "root": "projects/armament",
       "sourceRoot": "projects/armament/src",
       "projectType": "library",
-      "prefix": "lib",
+      "prefix": "arm",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
