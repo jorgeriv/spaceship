@@ -125,6 +125,46 @@
           }
         }
       }
+    },
+    "armament": {
+      "root": "projects/armament",
+      "sourceRoot": "projects/armament/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/armament/tsconfig.lib.json",
+            "project": "projects/armament/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/armament/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/armament/src/test.ts",
+            "tsConfig": "projects/armament/tsconfig.spec.json",
+            "karmaConfig": "projects/armament/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/armament/tsconfig.lib.json",
+              "projects/armament/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "spaceship"
